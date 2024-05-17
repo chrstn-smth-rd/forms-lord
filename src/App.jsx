@@ -1,35 +1,33 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import "./App.css";
+import { ClassApp } from "./ClassApp/ClassApp";
+import { FunctionalApp } from "./FunctionalApp/FunctionalApp";
+import { allCities } from "./assets/utilities/cities";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+      <div className="all-container">
+        <u>
+          <h1>Lord of the Forms</h1>
+        </u>
+        <h4>Your Journey to good form UI Starts Here</h4>
+        <h4>Always remember.. One does not simply fill out a react form</h4>
+        <div className="forms-container">
+          <div className="left">
+            <FunctionalApp />
+          </div>
+          <div className="right">
+            <ClassApp />
+          </div>
+        </div>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <datalist id="cities">
+        {allCities.map((city) => (
+          <option key={city}>{city}</option>
+        ))}
+      </datalist>
     </>
-  )
+  );
 }
 
-export default App
+export default App;

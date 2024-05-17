@@ -1,0 +1,15 @@
+import { useState } from "react";
+import { ProfileInformation } from "../ProfileInformation";
+import { FunctionalForm } from "./FunctionalForm";
+
+export const FunctionalApp = () => {
+  const [user, setUser] = useState(null);
+
+  return (
+    <>
+      <h2>Functional</h2>
+      <ProfileInformation user={user} />
+      <FunctionalForm setUser={setUser} />
+    </>
+  );
+};

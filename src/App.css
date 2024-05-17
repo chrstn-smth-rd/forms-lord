@@ -1,8 +1,57 @@
+@font-face {
+  font-family: "RingBearer";
+  src: url("./assets/fonts/RINGM___.TTF");
+}
+
+@font-face {
+  font-family: "MorrisRoman";
+  src: url("./assets/fonts/MorrisRoman-Black.ttf");
+}
+
+@font-face {
+  font-family: "Caligraf";
+  src: url("./assets/fonts/Caligrafmediumpersonaluse-ZVJ6J.ttf");
+}
+
 #root {
-  max-width: 1280px;
+  width: 100vw;
+  min-height: 100vh;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+  display: flex;
+  font-family: RingBearer;
+  background-image: url(./assets/paper-background.jpeg);
+  background-repeat: repeat;
+}
+
+select {
+  font-family: 'RingBearer';
+}
+
+h4 {
+  font-family: Caligraf;
+  font-size: 20;
+}
+
+h1 {
+  margin-bottom: 0;
+}
+.left,
+.right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #ffffff3f;
+  padding: 10px;
+}
+
+.left {
+  border: 5px solid black;
+}
+.right {
+  border: 5px solid black;
 }
 
 .logo {
@@ -39,4 +88,22 @@
 
 .read-the-docs {
   color: #888;
+}
+
+.all-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.forms-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.user-info {
+  border: 5px solid black;
+  padding: 5px;
+  width: 400px;
 }

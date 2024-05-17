@@ -4,13 +4,14 @@
   font-weight: 400;
 
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  color: #213547;
+  background-color: #ffffff;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
 }
 
 a {
@@ -31,8 +32,11 @@ body {
 }
 
 h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+  font-size: 3em;
+  margin: 0px;
+}
+h4 {
+  margin: 0px 0px 10px 0px;
 }
 
 button {
@@ -54,15 +58,107 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+form label {
+  font-size: 20px;
+  padding-left: 4px;
+  font-family: RingBearer;
+}
+
+form input {
+  font-size: 15px;
+  padding-left: 4px;
+  font-family: MorrisRoman;
+}
+
+form input:not([type="submit"]) {
+  width: 300px;
+}
+
+input[type="submit"] {
+  padding: 10px;
+}
+
+form label {
+  margin-right: 10px;
+  flex: 1;
+}
+
+.input-wrap {
+  flex: 1;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+#phone-input-1 {
+  width: 30px;
+}
+#phone-input-2 {
+  width: 30px;
+}
+#phone-input-3 {
+  width: 30px;
+}
+#phone-input-4 {
+  width: 30px;
+}
+
+#phone-input-1,
+#phone-input-2,
+#phone-input-3,
+#phone-input-4 {
+  text-align: center;
+}
+
+#phone-input-wrap {
+  display: flex;
+  justify-content: space-between;
+  flex: 2;
+  width: 400px;
+}
+
+.error-message {
+  border: 1px solid black;
+  padding: 2px;
+  color: white;
+  font-family: MorrisRoman;
+  background-color: tomato;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  font-size: 15px;
+}
+
+form label {
+  margin-right: 10px;
+  flex: 1;
+}
+
+.input-wrap {
+  flex: 1;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+#phone-input-1 {
+  width: 30px;
+}
+#phone-input-2 {
+  width: 30px;
+}
+#phone-input-3 {
+  width: 30px;
+}
+
+#phone-input-1,
+#phone-input-2,
+#phone-input-3,
+#phone-input-4 {
+  text-align: center;
+}
+
+#phone-input-wrap {
+  display: flex;
+  justify-content: space-between;
+  flex: 2;
 }
